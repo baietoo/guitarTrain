@@ -1,8 +1,10 @@
 'use strict'
 let divString = document.getElementById('string-nr-container');
 let btnStartPractice = document.getElementById('start-practice');
+let btnConfirmPractice = document.getElementById('confirm-practice');
 let btnStopPractice = document.getElementById('stop-practice');
 let cardString = document.getElementById("string-card");
+let nrOfSeconds = document.getElementById("seconds");
 let practiceInterval = null;
 const stringNotes = [
     'A', 'A#', 'B', 'C', 'C#', 'D',
@@ -22,8 +24,10 @@ function startPractice() {
 };
 
 
-btnStartPractice.addEventListener('click', () => {
-    interval = prompt("Set interval in miliseconds");
+btnConfirmPractice.addEventListener('click', () => {
+    // interval = prompt("Set interval in miliseconds");
+    interval = parseInt(nrOfSeconds.value);
+    interval *= 1000;
     btnStartPractice.classList.add('d-none');
     btnStopPractice.classList.remove('d-none');
     cardString.classList.remove('d-none');

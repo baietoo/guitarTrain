@@ -25,19 +25,45 @@
     <div class="container">
         <div class="d-flex flex-column justify-content-center py-3">
             <div class="practice-buttons"></div>
-            <button id="start-practice" class="btn btn-primary">Start Practice</button>
+            <!-- <button id="start-practice" class="btn btn-primary">Start Practice</button> -->
+            
+            <!-- Button trigger modal -->
+            <button id="start-practice" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Start Practice
+            </button>
+
             <button id="stop-practice" class="btn btn-danger d-none">Stop Practice</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">seconds between notes</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <input id="seconds" type="number">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button id="confirm-practice" type="button" class="btn btn-primary" data-bs-dismiss="modal">Start</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="card p-4 d-none text-dark bg-warning" id="string-card">
                 <div class="card-header">
                 </div>
                 <div class="card-body" id="string-nr-container">
-                  <!-- <blockquote class="blockquote mb-0">
+                    <!-- <blockquote class="blockquote mb-0">
                     <p>A well-known quote, contained in a blockquote element.</p>
                     <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote> -->
                 </div>
-              </div>
+            </div>
 
         </div>
     </div>
