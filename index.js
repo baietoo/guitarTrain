@@ -15,9 +15,6 @@ const stringNotes = [
 
 let interval = null;
 
-// document.addEventListener('DOMContentLoaded', function () {
-//     // writeStringNumber());
-
 function startPractice() {
     while (divString.firstChild) {
         divString.removeChild(divString.firstChild);
@@ -30,7 +27,6 @@ function startPractice() {
 
 
 btnConfirmPractice.addEventListener('click', () => {
-    // interval = prompt("Set interval in miliseconds");
     interval = parseInt(nrOfSeconds.value);
     // TODO: if value empty break
     interval *= 1000;
@@ -40,11 +36,6 @@ btnConfirmPractice.addEventListener('click', () => {
     divString.insertAdjacentHTML('afterbegin', `<h3 class="current-string text-center">${getString()}</h3>`);
     divNote.insertAdjacentHTML('afterbegin', `<h2 class="current-string text-center">${getNote()}</h2>`);
     practiceInterval = setInterval(startPractice, interval);
-
-    // let btnStopPractice = document.getElementById("stop-practice");
-    // btnStopPractice.addEventListener('click', () => {
-    //     clearInterval()
-    // })
 
 });
 
@@ -56,13 +47,6 @@ btnStopPractice.addEventListener('click', () => {
     divString.removeChild(divString.firstChild);
     divNote.removeChild(divNote.firstChild);
 })
-// divString.innerHTML = setInterval(() => {
-// }, 1000);    
-// });
-
-// btnStopPractice.addEventListener('click', () => {
-//     clearInterval(btnStartPractice);
-// })
 
 function getString() {
     let stringNumbers = '123456';
@@ -75,8 +59,6 @@ function getString() {
         [5, 'th'],
         [6, 'th']
     ]);
-    
-    //let stringNote = stringNotes[Math.floor(Math.random() * (stringNotes.length)) + 1];
     return `${stringNumber}${stringMap.get(stringNumber)} string`
 };
 
@@ -97,21 +79,3 @@ function highlightText(strings, ...values) {
     }
     return str
 };
-
-// divStringNbr.addEventListener('click' () =>{
-
-// });
-
-// divStringNbr.setInterval(() => {
-//     return divStringNbr.innerHTML= Math.random();
-// }, 1000ms);
-
-
-// function returnStringNumber (max) {
-//     console.log( Math.floor(Math.random() * 6) + 1);
-//     return Math.floor(Math.random() * max) + 1
-// };
-
-// function writeStringNumber() {
-//     divString.innerText = returnStringNumber(5);
-// }
