@@ -1,0 +1,15 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-guitartrain-dev-200030-authRole",
+      "UnauthRoleArn": "arn:aws:iam::440046377987:role/amplify-guitartrain-dev-200030-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::440046377987:role/amplify-guitartrain-dev-200030-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-guitartrain-dev-200030-deployment",
+      "UnauthRoleName": "amplify-guitartrain-dev-200030-unauthRole",
+      "StackName": "amplify-guitartrain-dev-200030",
+      "StackId": "arn:aws:cloudformation:eu-central-1:440046377987:stack/amplify-guitartrain-dev-200030/06256150-7601-11eb-9100-0a28386b6b94",
+      "AmplifyAppId": "d3cm4uk2ifmlqh"
+    }
+  }
+}
